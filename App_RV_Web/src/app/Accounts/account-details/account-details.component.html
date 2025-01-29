@@ -1,81 +1,87 @@
 <!-- CONTAINS THE INFORMATION OF ACCOUNTS AND RETURNS THE VALUES ON A FORM WHERE IT CAN BE CHANGED -->
-<div  class=" container container-fluid-lg mx-auto p-1 bg-dark m-1" *ngIf = "AccountMain">     
-    <header class="fw-bolder p-1 fs-4"> Account Details of {{ AccountMain.fname | uppercase }} {{ AccountMain.lname | uppercase }}</header>
-    <!-- AN IMAGE SECTION WHERE THE IMAGE OF THE ACCOUNT WILL BE DISPLAYED AND IT CAN BE CHANGED -->
+<div class="container container-fluid-lg mx-auto p-1 bg-dark m-1" *ngIf="AccountMain">
+    <header class="fw-bolder p-1 fs-4">
+        Account Details of {{ AccountMain.fname | uppercase }} {{ AccountMain.lname | uppercase }}
+    </header>
+
+    <!-- IMAGE SECTION -->
     <div class="row">
-        <div class="col-5">
+        <div class="col-5 text-center">
             <div class="mb-3">
-                <img class="mb-3" src="{{AccountMain.imgPath}}">
+                <img class="mb-3" src="{{AccountMain.imgPath}}" alt="User Image">
                 <div class="form-group">
                     <input class="form-control mb-3" type="file" (change)="onFileSelected($event)">
                 </div>
             </div>
         </div>
     </div>
-    <!-- A SECTION FOR ALL THE INPUT FIELDS WHERE THE VALUES CAN BE CHANGED -->
+
+    <!-- ACCOUNT DETAILS FORM -->
     <form (ngSubmit)="saveChanges()">
         <div class="row">
             <div class="col-3">
                 <div class="form-floating mb-3">
-                    <input type="text"class="form-control" id="floatingid" name="floatingid" [(ngModel)]="AccountMain.id" disabled="disabled">
+                    <input type="text" class="form-control" id="floatingid" name="floatingid" [(ngModel)]="AccountMain.id" disabled>
                     <label for="floatingid">Account ID</label>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-5">
+            <div class="col-md-6 col-sm-12">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingfname" name="floatingfname" [(ngModel)]="editedAccount.fname">
-                    <label for="floatingfname">First Name</label> 
+                    <label for="floatingfname">First Name</label>
                 </div>
             </div>
-            <div class="col-5">
-                <div class="form-floating mb-3"> 
+            <div class="col-md-6 col-sm-12">
+                <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatinglname" name="floatinglname" [(ngModel)]="editedAccount.lname">
-                    <label for="floatinglname">Last Name</label> 
+                    <label for="floatinglname">Last Name</label>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-5">
+            <div class="col-md-6 col-sm-12">
                 <div class="form-floating mb-3">
-                    <input type="text"class="form-control" id="floatingemai" name="floatingemai" [(ngModel)]="editedAccount.email">
+                    <input type="text" class="form-control" id="floatingemail" name="floatingemail" [(ngModel)]="editedAccount.email">
                     <label for="floatingemail">Email</label>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-md-6 col-sm-12">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatinggmobile" name="floatinggmobile" [(ngModel)]="editedAccount.mobile">
+                    <input type="text" class="form-control" id="floatingmobile" name="floatingmobile" [(ngModel)]="editedAccount.mobile">
                     <label for="floatingmobile">Mobile</label>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-5">
+            <div class="col-md-6 col-sm-12">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatinggender" name="floatinggender" [(ngModel)]="editedAccount.gender">
                     <label for="floatinggender">Gender</label>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-md-6 col-sm-12">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingmarital" name="floatingmarital" [(ngModel)]="editedAccount.marital">
                     <label for="floatingmarital">Marital Status</label>
                 </div>
             </div>
         </div>
+
         <div class="col-10">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingdateb" name="floatingdateb" [(ngModel)]="editedAccount.dateb">
                 <label for="floatingdateb">Date of Birth</label>
             </div>    
         </div>
-        <!-- A BLOCK THAT CONTAINS TWO BUTTONS FOR BOTH THE SAVE CHANGES IF PRESSED RETURN ALL THE CHANGED VALUES AND A BACK BUTTON WHERE IT REDIRECTS BACK TO ACCOUNTS -->
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <!--<button type="button"  class="btn btn-success bg-gradient" (click)="!formDirty" >Save changes</button>
-            <button type="button" class="btn btn-secondary bg-gradient" (click)="goBack()">Back</button>-->
 
-            <button type="submit" class="btn btn-success bg-gradient" (click)="!formDirty">Save Changes</button>
+        <!-- BUTTONS -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-success bg-gradient">Save Changes</button>
             <button type="button" class="btn btn-secondary bg-gradient" (click)="discardChanges()">Back</button>
         </div>
     </form>

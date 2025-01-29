@@ -1,8 +1,9 @@
 <h3>{{page_title}}</h3>
+
 <!-- THIS CONTAINER CONTAINS THE ADD METHOD FOR ACCOUNTS -->
 <div class="container-fluid">
-  <div class="row align-item-center g-lg-5 py-5">
-    <div class="col-lg-12-f4">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-12">
       <form class="p-5 border rounded-3 bg-dark" [formGroup]="accountForm" (ngSubmit)="addComponent()">
         <h1 class="display-4 fw-bold lh-4 mb-3">ADD NEW ACCOUNT</h1>
         <div class="form-floating mb-3">  
@@ -14,63 +15,30 @@
     </div>
   </div>
 </div>
-<!-- unused code -->
-<!--<div class="add-component-form">
-  <form (submit)="addComponent()">
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" [(ngModel)]="newComponent.fname" required>
-    </div>
-    <button type="submit">Add</button>
-  </form>
-</div>-->
+
 <br>
+
+<!-- ACCOUNT DISPLAY SECTION -->
 <div class="container container-fluid text-center">
   <div class="row">
-    <div class="col-3" *ngFor="let account of ACCOUNTSAMP">
-      <div class="card mb-3 bg-dark" >
-        <div class="card-body" >
-          <img src="{{account.imgPath}}" class="img-thumbnail active">
+    <div class="col-md-4 col-sm-12 mb-4" *ngFor="let account of ACCOUNTSAMP">
+      <div class="card mb-3 bg-dark">
+        <div class="card-body d-flex justify-content-center"> <!-- Added flex center class here -->
+          <img src="{{account.imgPath}}" class="img-thumbnail active center-img"> <!-- Added class for centering -->
         </div>
         <h2 class="text-light">{{account.fname}} {{account.lname}}</h2>
         <div class="card-body">
           <span class="text-info">{{account.marital}} </span>
         </div>
         <div class="card-footer">
-          <button type="button" class="btn btn-info btn-center btn- me-2"(click)="viewAccount(account.id)"><i class="bi bi-info-circle"></i>View</button>
-          <button type="button" class="btn btn-info btn-center btn-danger me-2" (click)="deleteComponent(account.id)">Delete</button>
+          <button type="button" class="btn btn-info btn-center btn-me-2" (click)="viewAccount(account.id)">
+            <i class="bi bi-info-circle"></i>View
+          </button>
+          <button type="button" class="btn btn-info btn-center btn-danger me-2" (click)="deleteComponent(account.id)">
+            Delete
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- unused code -->
-<!--- <h2>Account List</h2>
-    <ul>
-      <li *ngFor="let account of ACCOUNTSAMP">
-        {{ account.fname }}
-        <button (click)="viewComponent(item.id)">View</button>
-        <button (click)="deleteComponent(item.id)">Delete</button>
-      </li>
-    </ul>
-
-
-    <div class="table-card">
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Gender</th>
-        </tr>
-        <tr *ngFor="let account of ACCOUNTSAMP">
-          <td>{{ account.id }}</td>
-          <td>{{ account.fname }}</td>
-          <td>{{ account.gender }}</td>
-          <td>
-            <button (click)="viewAccount(account.id)">View</button>
-            <button (click)="deleteComponent(account.id)">Delete</button>
-          </td>
-        </tr>
-      </table>
-    </div> -->

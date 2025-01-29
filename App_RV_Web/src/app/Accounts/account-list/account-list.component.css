@@ -1,6 +1,8 @@
+/* Make images responsive */
 img {
-    height: 250px;
-    width: 250px;
+    height: auto;
+    width: 100%;
+    max-width: 250px; /* Ensures image is responsive but does not exceed original size */
     border-radius: 50%;
     align-content: center;
     align-self: center;
@@ -9,13 +11,15 @@ img {
     min-height: auto;
 }
 
-h3{
-    color:black;
-    font-size: 75px;
+/* Center and adjust the size of headings */
+h3 {
+    color: black;
+    font-size: 3rem;  /* Scales well across devices */
     text-align: center;
 }
 
-.card{
+/* Styling for cards */
+.card {
     border: none;
     background: none;
     min-height: max-content;
@@ -23,10 +27,43 @@ h3{
     height: auto;
 }
 
-button{
-  margin-right: 16px;
+/* Button styling */
+button {
+    margin-right: 16px;
 }
 
-.container{
+/* Center the image inside the card */
+.center-img {
+    max-width: 100%;    /* Ensures the image does not exceed the width of its container */
+    height: auto;       /* Keeps the image's aspect ratio intact */
+    display: block;     /* Makes the image a block element */
+    margin-left: auto;  /* Centers the image horizontally */
+    margin-right: auto; /* Centers the image horizontally */
+}
+
+/* Make container flexible and responsive */
+.container {
     display: block;
+}
+
+/* Make sure the layout works on smaller screens */
+@media (max-width: 768px) {
+    img {
+        max-width: 150px; /* Reduce image size for smaller devices */
+    }
+
+    h3 {
+        font-size: 2rem; /* Adjust heading size for small screens */
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Make buttons take full width on small screens */
+    }
 }

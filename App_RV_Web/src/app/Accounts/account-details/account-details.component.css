@@ -1,33 +1,49 @@
-
-/* Set height and width for images */
-img{
-    height: 250px;
-    width: 250px;
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
-    
+
 /* Center align the header */
-h2{
-    margin-left: 37%;
-    font-weight: bold;
-}
-    
-/* Set bold font and color for labels */
-label{
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-    
-/* Set white color for header */
-header{
-    color: rgb(255, 255, 255);
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
 }
 
+/* Set bold font and color for labels */
+label {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+/* Set white color for header */
+header {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* Fix input disabled styling */
 input:disabled {
   background: #dddddd;
 }
 
-input:disabled+label {
-  color: none;
-  background: none;
-  background-color: none;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-5, .col-3, .col-10 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  
+  .d-md-flex {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .btn {
+      width: 100%;
+      margin-bottom: 10px;
+  }
 }

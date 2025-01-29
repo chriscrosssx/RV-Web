@@ -1,0 +1,20 @@
+{
+  "name": "idb1_appdev1_fin",
+  "version": "1.0.0",
+  "description": "## Final Application Requirement     Christian Junio     Renato Consolacion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriscrosssx/IDB1_APPDEV1_FIN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriscrosssx/IDB1_APPDEV1_FIN/issues"
+  },
+  "homepage": "https://github.com/chriscrosssx/IDB1_APPDEV1_FIN#readme"
+}

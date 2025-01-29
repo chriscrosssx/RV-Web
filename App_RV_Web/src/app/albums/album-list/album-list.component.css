@@ -1,0 +1,43 @@
+button {
+    margin:auto;
+}
+
+h3 {
+    color:black;
+    font-size: 75px;
+    text-align: center;
+}
+
+h4 {
+    text-align: center; 
+    font-family: 'Varela Round';
+    font-size: 29px;
+}
+
+p {
+    font: lighter;
+    font-weight: lighter;
+    padding: 15px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+}
+
+img {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.card, .card-footer {
+    border: none;
+    background: none;
+    min-height: max-content;
+    width: auto;
+    height: auto;
+}
+
+
+.container-fluid {
+    display: inline-block;
+
+}

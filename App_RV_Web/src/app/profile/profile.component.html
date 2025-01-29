@@ -1,0 +1,40 @@
+<!-- Starting the artistDetail div container -->
+<div class="artistDetail subDetail" >
+   <!-- If statement to check if selectedRedvelvet is truthy -->
+  <div class="artistTop subTop" *ngIf="selectedRedvelvet">
+    <!-- Left div container with image -->
+    <div class="left">
+      <img src="/assets/{{selectedRedvelvet.img2}}" class="img"/>
+    </div>
+    <!-- Right div container with member information -->
+    <div class="right">
+      <!-- Subtitle with member name -->
+      <div class="subTit">
+        <span>RED VELVET PROFILE</span>
+        <div class="titTxt">
+          <h4><b>{{selectedRedvelvet.name}}</b></h4>
+        </div>
+
+        <!-- placed right textbox for the member descriptions -->
+        <div class="txtBox">
+          <div class="profile">
+            <h3><b>Stage Name:</b> {{selectedRedvelvet.stage}}</h3>
+            <h3><b>Position:</b> {{selectedRedvelvet.position}}</h3>
+            <h3><b>Birthday:</b> {{selectedRedvelvet.bday}}</h3>
+            <h3><b>Nationality:</b> {{selectedRedvelvet.nationality}}</h3>
+            <h3><b>Height:</b> {{selectedRedvelvet.height}}</h3>
+            <h3><b>Zodiac Sign:</b> {{selectedRedvelvet.zodiac}}</h3>
+            
+          </div>
+          
+        </div>
+        <!-- This is a button group at the bottom, containing a "Go Back" button and a "ReVeluv" button -->
+      <pre><button type="button" routerLink="/redvelvet" class="btn btn-secondary">GO BACK</button></pre>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Breakpoint div for spacing -->
+<div class="breakpoint">
+  <p></p>
+</div>

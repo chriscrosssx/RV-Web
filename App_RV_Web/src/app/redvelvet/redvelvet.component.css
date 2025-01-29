@@ -1,0 +1,19 @@
+.img { 
+    width: 100%;
+    display: block;
+    height: auto;
+    
+}
+
+.card {
+    width: fit-content;
+    display: block;
+    
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+<div class="container container-fluid text-center">
+  <div class="row justify-content-md-center">
+    <div class="col-md-7">
+
+      <!-- This is a Bootstrap card that is being dynamically generated using the *ngFor directive -->
+      <div class="card text-white bg-dark mb-3" *ngFor="let redvelvet of redvelvet">
+
+        <!-- This is the header of the card, containing the group name, "REDVELVET" -->
+        <div class="card-header" button type="button" routerLink="/profile/{{redvelvet.name}}"><h3><b>RED VELVET</b></h3>
+        </div>
+
+        <!-- This is the image of the member being displayed in the card -->
+        <img src="/assets/{{ redvelvet.img }}" button type="button" routerLink="/profile/{{redvelvet.name}}" class="img"/>
+
+        <!-- This is the body of the card, containing the member's stage name and zodiac sign -->
+        <div class="card-body">
+          <h4 class="card-title">{{redvelvet.stage}}</h4>
+          <p class="card-text">{{redvelvet.zodiac}}</p>
+        </div>
+      </div>   
+    </div>
+  </div>
+</div>

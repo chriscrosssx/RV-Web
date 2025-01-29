@@ -1,0 +1,15 @@
+input:disabled {
+    background: #dddddd;
+}
+  
+input:disabled+label {
+    color: none;
+    background: none;
+    background-color: none;
+}
+
+label{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+    

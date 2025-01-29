@@ -1,0 +1,53 @@
+<div class="container container-fluid-lg mx-auto p-3 bg-dark m-3" *ngIf="Album">     
+
+    <!-- Album Details Header -->
+    <header class="fw-bolder p-1 fs-4 text-danger"> Album Details of {{Album.item.name}}</header>
+
+    <!-- Album ID -->
+    <div class="row">
+        <div class="col-2">
+            <div class="form-floating mb-3">
+                <input type="text"class="form-control" id="floatingCode"placeholder="Album ID" [(ngModel)]="Album.id" disabled="disabled">
+                <label for="floatingid">Album Id</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Album Name and Description -->
+    <div class="row">
+        <div class="col-5">
+            <div class="form-floating mb-3"> 
+                <input type="text" class="form-control" id="floatingCode"placeholder="fname" [(ngModel)]="Album.item.name">
+                <label for="floatingfname">Item Name</label> 
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="form-floating mb-3"> 
+                <input type="text" class="form-control" id="floatingCode"placeholder="lname" [(ngModel)]="Album.item.description">
+                <label for="floatinglname">Description</label> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Album Unit Price and Quantity -->
+    <div class="row">
+        <div class="col-5">
+            <div class="form-floating mb-3">
+                <input type="text"class="form-control"id="floatingCode" placeholder="Email" [(ngModel)]="Album.item.unit_price">
+                <label for="floatingemail">Unit Price</label>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingCode" placeholder="Mobile" [(ngModel)]="Album.item.qty">
+                <label for="floatingmobile">Quantity</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save and Back Buttons -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button"  class="btn btn-success bg-gradient" (click)="saveChanges()" >Save changes</button>
+        <button type="button" class="btn btn-secondary bg-gradient" (click)="goBack()">Back</button>
+    </div>
+</div>

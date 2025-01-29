@@ -1,0 +1,99 @@
+.subContent.artist-detail-content .artistDetail.subDetail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input, div {
+    box-sizing: border-box;
+    border: none;
+}
+
+.subContent.artist-detail-content .artistDetail.subDetail .artistTop.subTop {
+    width: 100%;
+    flex: 1;
+}
+
+.subTop {
+    width: 100%;
+    max-width: 1340px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.subTop .left img {
+    max-width: 100%;
+    width: 100%;
+}
+
+img {
+    vertical-align: top;
+}
+
+fieldset, img {
+    border: 0;
+    border: none;
+}
+
+.subTop .left {
+    float: left;
+    width: 50%;
+    padding-bottom: 56px;
+}
+
+.subTop .right {
+    float: right;
+    width: calc(50% - 20px);
+    border-top: 6px solid #191919;
+    padding: 24px 22px 56px 40px;
+}
+
+.subTit .titTxt h4 {
+    float: left;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.artistTop .txtBox {
+    margin-top: 85px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Noto Sans KR";
+    line-height: 300px;
+}
+
+.artistTop .txtBox > div {
+    margin-bottom: 100px;
+    min-height: 100px;
+    font-size: 15px;
+    border: none;
+}
+
+.artistTop .txtBox > div h3 {
+    float: left;
+    min-width: 300px;
+    font-size: 17px;
+    border: none;
+}
+
+.artistTop .txtBox > div h3 ~ p {
+    margin-left: 10px;
+    color: #666666;
+    border: none;
+}
+
+.breakpoint {
+    padding: 245px;
+}
+
+.artistTop .txtBox > div:after {
+    content: "";
+    clear: both;
+    border: none;
+    display: block;
+}
+
+pre {
+    display: inline-block;
+}

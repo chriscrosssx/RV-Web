@@ -1,0 +1,32 @@
+img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    align-content: center;
+    align-self: center;
+    display: block;
+    min-width: auto;
+    min-height: auto;
+}
+
+h3{
+    color:black;
+    font-size: 75px;
+    text-align: center;
+}
+
+.card{
+    border: none;
+    background: none;
+    min-height: max-content;
+    width: auto;
+    height: auto;
+}
+
+button{
+  margin-right: 16px;
+}
+
+.container{
+    display: block;
+}

@@ -1,3 +1,4 @@
+/* Background Image for the Home Section */
 .home-image {
     background-image: url(/assets/redvelvet_home.jpg);
     background-position: center;
@@ -11,21 +12,65 @@
     overflow: auto;
 }
 
-
+/* Overlay Text Styling */
 .overlay-text {
-    background-color:rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
     padding: 30px;
     position: absolute;
     text-align: center;
     color: rgba(0, 0, 0, 1);
     top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    left: 50%; /* Changed right to left for centering */
+    transform: translate(-50%, -50%);
     font-style: italic;
     font-size: large;
+    width: 80%; /* Makes sure the text doesn't stretch too much */
+    max-width: 900px; /* Optional: Adds a maximum width */
 }
 
+/* Overlay Header Style */
 .overlay-text h4 {
     font-family: "Lucida Console", monospace;
     font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .overlay-text h4 {
+        font-size: 40px; /* Slightly smaller text for tablets */
+    }
+
+    .overlay-text p {
+        font-size: 1rem; /* Adjust paragraph text size */
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-text h4 {
+        font-size: 30px; /* Even smaller text for medium screens */
+    }
+
+    .overlay-text p {
+        font-size: 0.9rem; /* Smaller text for mobile devices */
+    }
+
+    .overlay-text {
+        width: 85%; /* Allow for more padding on smaller screens */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-text h4 {
+        font-size: 24px; /* Smaller font size for very small screens */
+    }
+
+    .overlay-text p {
+        font-size: 0.85rem; /* Further reduce paragraph text size */
+    }
+
+    .overlay-text {
+        padding: 20px; /* Slightly reduced padding for smaller screens */
+    }
 }
